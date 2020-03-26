@@ -407,6 +407,10 @@ bool BigInt::operator>=(const BigInt& rhs) const {
 	}
 }
 
+bool BigInt::operator==(const BigInt& rhs) const {
+	return ((*this <= rhs) && (*this >= rhs));
+}
+
 bool BigInt::operator<(const long long& rhs) const {
 	BigInt right(rhs);
 	return *this < right;
@@ -425,6 +429,11 @@ bool BigInt::operator>=(const long long& rhs) const {
 	return !(*this < rhs);
 }
 
+bool BigInt::operator==(const long long& rhs) const {
+	BigInt right(rhs);
+	return *this == right;
+}
+
 bool BigInt::operator<(const std::string& rhs) const {
 	BigInt right(rhs);
 	return *this < right;
@@ -441,6 +450,11 @@ bool BigInt::operator>(const std::string& rhs) const {
 
 bool BigInt::operator>=(const std::string& rhs) const {
 	return !(*this < rhs);
+}
+
+bool BigInt::operator==(const std::string& rhs) const {
+	BigInt right(rhs);
+	return *this == right;
 }
 
 // Return number

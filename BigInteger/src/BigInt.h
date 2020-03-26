@@ -64,14 +64,18 @@ public:
 	bool operator<=(const BigInt& rhs) const;
 	bool operator>(const BigInt& rhs) const;
 	bool operator>=(const BigInt& rhs) const;
+	bool operator==(const BigInt& rhs) const;
 	bool operator<(const long long& rhs) const;
 	bool operator<=(const long long& rhs) const;
 	bool operator>(const long long& rhs) const;
 	bool operator>=(const long long& rhs) const;
+	bool operator==(const long long& rhs) const;
 	bool operator<(const std::string& rhs) const;
 	bool operator<=(const std::string& rhs) const;
 	bool operator>(const std::string& rhs) const;
 	bool operator>=(const std::string& rhs) const;
+	bool operator==(const std::string& rhs) const;
+	
 
 	// Return number
 	long long get_num();
